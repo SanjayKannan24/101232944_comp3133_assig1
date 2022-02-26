@@ -14,9 +14,6 @@ exports.resolver = {
                 return Booking.find({"username" : args.username})
             } 
         }
-        
-
-
     },
     viewListings: () => {
         console.log(Listing.find({}))
