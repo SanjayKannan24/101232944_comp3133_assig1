@@ -10,16 +10,19 @@ const BookListingSchema = new mongoose.Schema({
         required: true
     },
     booking_date : {
-        type: Date,
-        required: true
+        type: String,
+        required: true,
+        placeholder : "mm-dd-yyyy"
     },
     booking_start : {
-        type : Date,
-        required : true
+        type : String,
+        required : true,
+        placeholder : "mm-dd-yyyy"
     },
     booking_end : {
-        type : Date,
-        required : true
+        type : String,
+        required : true,
+        placeholder : "mm-dd-yyyy"
     },
     username : {
         type: String,

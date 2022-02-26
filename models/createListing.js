@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const CreateListingSchema = new mongoose.Schema({
     listing_id : {
         type: String,
-        required: true
+        required: true,
     },
     listing_title : {
         type: String,
@@ -26,11 +26,11 @@ const CreateListingSchema = new mongoose.Schema({
         required: true
     },
     price : {
-        type: Double,
+        type: Number,
         required: true
     },
     email : {
-        type: email,
+        type: String,
         required: true,
         validate: function(value) {
             var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;

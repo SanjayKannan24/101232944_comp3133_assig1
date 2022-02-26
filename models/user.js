@@ -15,14 +15,15 @@ const UserSchema = new mongoose.Schema({
         required: [true , "Please enter the last name"]
     },
     password : {
-        type: password,
+        type: String,
         required: [true , "Please enter the password"],
         minlength: 6,
         lowercase: true,
-        uppercase: true
+        uppercase: true,
+        
     },
     email : {
-        type: email,
+        type: String,
         required: true,
         unique: [true , "This email already exists"],
         validate: function(value) {
@@ -33,7 +34,6 @@ const UserSchema = new mongoose.Schema({
     type : {
         type: String,
         required: true,
-        enum: ["admin" , "customer"]
     },
 });
 
